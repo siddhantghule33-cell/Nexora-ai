@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090d1f">
+<title>Nexora AI — Agency & AI Tools</title>
+<style>
+:root{--bg:#090d1f;--panel:#111832;--panel2:#172140;--line:#29365e;--text:#f5f7ff;--muted:#aab5d7;--blue:#7c8cff;--cyan:#63e3e0;--good:#86efac}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(900px 500px at 80% -10%,#202a60 0%,transparent 60%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}.app{max-width:1200px;margin:auto;padding:20px}.top{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 0 24px}.brand{display:flex;align-items:center;gap:11px}.logo{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:#071024;font-weight:950;font-size:21px;box-shadow:0 8px 28px #637cff40}.brand h1{font-size:20px;margin:0;letter-spacing:.3px}.brand small{color:var(--muted)}.pill{border:1px solid var(--line);background:#131b35;color:var(--muted);padding:8px 12px;border-radius:99px;font-size:12px}.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:stretch}.heroMain,.heroSide,.card{border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,#141d3b,#0f152b);padding:26px}.eyebrow{color:var(--cyan);font-size:12px;letter-spacing:2px;font-weight:800;text-transform:uppercase}.hero h2{font-size:clamp(30px,5vw,52px);line-height:1.07;margin:12px 0}.hero h2 span{background:linear-gradient(90deg,var(--blue),var(--cyan));color:transparent;background-clip:text}.hero p{color:var(--muted);line-height:1.7;max-width:650px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{border:0;border-radius:12px;padding:12px 16px;font-weight:750;background:linear-gradient(100deg,var(--blue),var(--cyan));color:#081126}.btn.secondary{background:#202b4e;color:var(--text);border:1px solid #34436d}.heroSide{display:flex;flex-direction:column;justify-content:space-between;gap:20px;background:radial-gradient(circle at 80% 10%,#3c4a94 0%,transparent 35%),#10172f}.orb{width:110px;height:110px;border-radius:50%;margin:8px auto 14px;background:radial-gradient(circle at 30% 25%,#fff,#91a4ff 20%,#5564ce 48%,#162148 70%);box-shadow:0 0 65px #7685ff50;display:grid;place-items:center;font-size:35px}.statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stat{background:#ffffff08;border:1px solid #ffffff12;border-radius:13px;padding:12px}.stat strong{display:block;font-size:19px}.stat small{color:var(--muted);font-size:11px}.section{margin-top:28px}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:14px}.sectionhead h3{margin:0;font-size:23px}.sectionhead p{margin:5px 0 0;color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{padding:20px;background:#10172e}.iconbox{width:43px;height:43px;border-radius:13px;background:#27335e;display:grid;place-items:center;font-size:22px;margin-bottom:14px}.card h4{font-size:17px;margin:0 0 7px}.card p{font-size:13px;color:var(--muted);line-height:1.6;margin:0 0 16px}.price{font-weight:800;color:var(--cyan);margin:10px 0 15px}.card .btn{width:100%;padding:10px}.toolgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.toolbox{border:1px solid var(--line);border-radius:20px;padding:20px;background:#10172e}.toolbox h4{margin:0 0 6px;font-size:18px}.toolbox p{color:var(--muted);font-size:13px;line-height:1.6}.field{display:block;width:100%;background:#0a1024;border:1px solid #303d66;border-radius:11px;padding:12px;color:var(--text);margin:9px 0 12px;outline:none}.field:focus{border-color:var(--cyan)}textarea.field{resize:vertical;min-height:95px}.result{display:none;margin-top:12px;background:#0a1024;border:1px dashed #42568d;border-radius:12px;padding:14px;color:#dce4ff;white-space:pre-wrap;line-height:1.6;font-size:13px}.result.show{display:block}.notice{border:1px solid #62542b;background:#2a2517;color:#f7e7ac;padding:12px 14px;border-radius:12px;font-size:12px;line-height:1.5;margin-top:18px}.orderform{display:grid;grid-template-columns:1fr 1fr;gap:10px}.orderform .wide{grid-column:1/-1}.footer{border-top:1px solid var(--line);margin-top:32px;padding:20px 0;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#e8f8ff;color:#09132b;padding:12px 16px;border-radius:12px;box-shadow:0 8px 30px #0006;display:none;max-width:90%;z-index:9}.toast.show{display:block}.adminTable{width:100%;border-collapse:collapse;font-size:13px}.adminTable th,.adminTable td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.adminTable select{max-width:150px}.adminWrap{overflow-x:auto}.smallBtn{border:1px solid var(--line);background:#202b4e;color:var(--text);padding:8px 10px;border-radius:9px}.adminHidden{display:none}
+@media(max-width:760px){.app{padding:14px}.hero{grid-template-columns:1fr}.heroMain,.heroSide{padding:21px}.grid{grid-template-columns:1fr}.toolgrid{grid-template-columns:1fr}.sectionhead{align-items:start;flex-direction:column}.orderform{grid-template-columns:1fr}.orderform .wide{grid-column:auto}.top{padding-bottom:16px}.top .pill{display:none}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand"><div class="logo">N</div><div><h1>NEXORA AI</h1><small>Agency + AI Tools</small></div></div>
+    <div class="pill">AI TOOLS • SERVER CONNECTED</div>
+  </header>
+
+  <section class="hero">
+    <div class="heroMain">
+      <div class="eyebrow">Your digital growth partner</div>
+      <h2>Build smarter.<br><span>Grow faster.</span></h2>
+      <p>तुमच्या व्यवसायासाठी वेबसाइट, पोस्टर, सोशल मीडिया कंटेंट आणि AI-आधारित डिजिटल सेवा — एका ठिकाणी.</p>
+      <div class="actions">
+        <button class="btn" onclick="scrollToId('services')">सेवा पाहा ↗</button>
+        <button class="btn secondary" onclick="scrollToId('tools')">AI Tools वापरा</button>
+      </div>
+    </div>
+    <div class="heroSide">
+      <div><div class="orb">✦</div><div style="text-align:center"><div class="eyebrow">Nexora workspace</div><h3 style="margin:8px 0">Ideas into digital work</h3><p style="margin:0 auto;font-size:13px">Plan • Create • Deliver</p></div></div>
+      <div class="statrow"><div class="stat"><strong>03</strong><small>Service types</small></div><div class="stat"><strong>02</strong><small>Demo tools</small></div><div class="stat"><strong>24/7</strong><small>Online showcase</small></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="sectionhead"><div><h3>Agency Services</h3><p>तुमच्या व्यवसायासाठी सेवा निवडा.</p></div><span class="pill">Sample pricing</span></div>
+    <div class="grid">
+      <article class="card"><div class="iconbox">⌘</div><h4>Website Design</h4><p>दुकान, क्लास, हॉटेल किंवा छोट्या व्यवसायासाठी responsive वेबसाइट.</p><div class="price">₹2,000 पासून*</div><button class="btn" onclick="chooseService('Website Design')">सेवा निवडा</button></article>
+      <article class="card"><div class="iconbox">✧</div><h4>AI Posters & Branding</h4><p>सोशल मीडिया पोस्ट, प्रमोशनल बॅनर आणि ब्रँडसाठी क्रिएटिव्ह डिझाइन.</p><div class="price">₹300 पासून*</div><button class="btn" onclick="chooseService('AI Posters & Branding')">सेवा निवडा</button></article>
+      <article class="card"><div class="iconbox">▶</div><h4>Reels & Video Editing</h4><p>व्यवसायासाठी शॉर्ट व्हिडिओ, Reels आणि जाहिरात कंटेंट.</p><div class="price">₹500 पासून*</div><button class="btn" onclick="chooseService('Reels & Video Editing')">सेवा निवडा</button></article>
+    </div>
+    <p style="color:var(--muted);font-size:11px;margin:10px 2px">*हे फक्त प्रोटोटाइपमधील नमुना दर आहेत. प्रत्यक्ष दर कामानुसार ठरवा.</p>
+  </section>
+
+  <section class="section" id="tools">
+    <div class="sectionhead"><div><h3>AI Tools Lab</h3><p>OpenAI API शी जोडलेली साधने — सर्व्हरवर API key सुरक्षित ठेवा.</p></div></div>
+    <div class="toolgrid">
+      <div class="toolbox">
+        <div class="iconbox">✍️</div><h4>AI Social Caption Helper</h4><p>व्यवसाय आणि पोस्टचा विषय लिहा. AI तुमच्यासाठी नवीन कॅप्शन तयार करेल.</p>
+        <label for="business">व्यवसायाचा प्रकार</label><input id="business" class="field" placeholder="उदा. कपड्यांचे दुकान">
+        <label for="topic">पोस्टचा विषय</label><input id="topic" class="field" placeholder="उदा. दिवाळी ऑफर">
+        <button class="btn" onclick="makeCaption()">कॅप्शन तयार करा</button><div id="captionResult" class="result"></div>
+      </div>
+      <div class="toolbox">
+        <div class="iconbox">🎨</div><h4>Poster Prompt Builder</h4><p>तपशील द्या. AI डिझाइन टूलमध्ये वापरण्यासाठी सविस्तर prompt तयार करेल.</p>
+        <label for="posterType">पोस्टरचा प्रकार</label><select id="posterType" class="field"><option>Instagram promotion</option><option>Festival offer</option><option>Product launch</option><option>Business announcement</option><option>Course promotion</option></select>
+        <label for="posterDetails">तपशील</label><textarea id="posterDetails" class="field" placeholder="ब्रँडचे नाव, रंग, ऑफर, संपर्क..."></textarea>
+        <button class="btn" onclick="makePrompt()">डिझाइन Prompt तयार करा</button><div id="promptResult" class="result"></div>
+      </div>
+    </div>
+    <div class="notice">AI सेवा वापरण्यासाठी सर्व्हरवर OPENAI_API_KEY सेट असणे आवश्यक आहे. प्रत्येक विनंतीसाठी API वापर शुल्क लागू होऊ शकते. फोटो तयार करणे, लॉगिन, पेमेंट आणि ऑर्डर डेटाबेस हे वेगळे फीचर्स आहेत.</div>
+  </section>
+
+  <section class="section" id="order">
+    <div class="sectionhead"><div><h3>Request a Service</h3><p>सेवेची माहिती भरा आणि WhatsApp वर ऑर्डर पाठवा.</p></div></div>
+    <div class="card">
+      <form id="orderForm" onsubmit="submitOrder(event)">
+        <div class="orderform">
+          <div><label for="customerName">तुमचे नाव</label><input id="customerName" class="field" required placeholder="नाव"></div>
+          <div><label for="customerContact">ईमेल किंवा फोन</label><input id="customerContact" class="field" required placeholder="संपर्क माहिती"></div>
+          <div><label for="serviceType">सेवा</label><select id="serviceType" class="field"><option>Website Design</option><option>AI Posters & Branding</option><option>Reels & Video Editing</option><option>AI Tool / Custom Project</option></select></div>
+          <div><label for="budget">अंदाजे बजेट</label><select id="budget" class="field"><option>₹1,000 पेक्षा कमी</option><option>₹1,000–₹3,000</option><option>₹3,000–₹10,000</option><option>₹10,000 पेक्षा जास्त</option><option>आधी चर्चा करू</option></select></div>
+          <div class="wide"><label for="details">कामाचे तपशील</label><textarea id="details" class="field" placeholder="तुम्हाला काय बनवायचे आहे?"></textarea></div>
+          <div class="wide"><button class="btn" type="submit">WhatsApp वर ऑर्डर पाठवा ↗</button></div>
+        </div>
+      </form>
+      <div id="orderResult" class="result"></div>
+    </div>
+  </section>
+
+  <section class="section" id="admin">
+    <div class="sectionhead"><div><h3>Admin Panel — Demo</h3><p>या ब्राउझरमध्ये सेव्ह झालेल्या ऑर्डर्स पाहा आणि स्थिती बदला.</p></div><button class="btn secondary" onclick="renderOrders()">ऑर्डर्स रिफ्रेश करा</button></div>
+    <div class="card">
+      <div class="actions" style="margin-top:0"><button class="btn" onclick="exportOrders()">ऑर्डर्स CSV डाउनलोड करा</button><span class="pill" id="orderCount">0 ऑर्डर्स</span></div>
+      <div class="notice">मर्यादा: हा स्थानिक डेमो Admin Panel आहे. ऑर्डर्स फक्त याच ब्राउझर/डिव्हाइसच्या localStorage मध्ये राहतात. सुरक्षित Admin Login, सर्व डिव्हाइसवर सिंक, ग्राहक खाती आणि ऑनलाइन पेमेंटसाठी सर्व्हर, डेटाबेस व पेमेंट गेटवे जोडणे आवश्यक आहे.</div>
+      <div class="adminWrap" style="margin-top:14px"><table class="adminTable"><thead><tr><th>ऑर्डर</th><th>ग्राहक</th><th>सेवा / बजेट</th><th>तपशील</th><th>स्थिती</th></tr></thead><tbody id="ordersBody"><tr><td colspan="5">अजून ऑर्डर्स नाहीत.</td></tr></tbody></table></div>
+    </div>
+  </section>
+
+  <footer class="footer"><span>© <span id="year"></span> Nexora AI • Prototype</span><span>Made to start small and scale thoughtfully.</span></footer>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'})}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
+function chooseService(s){document.getElementById('serviceType').value=s;scrollToId('order');showToast(s+' निवडले आहे. खाली विनंती भरा.')}
+async function makeCaption(){
+ const b=document.getElementById('business').value.trim();
+ const t=document.getElementById('topic').value.trim();
+ if(!b||!t){showToast('व्यवसायाचा प्रकार आणि पोस्टचा विषय भरा.');return}
+ await runAiTool('/api/generate/caption',{business:b,topic:t},'captionResult','कॅप्शन तयार होत आहे...');
+}
+async function makePrompt(){
+ const type=document.getElementById('posterType').value;
+ const details=document.getElementById('posterDetails').value.trim();
+ if(!details){showToast('पोस्टरचे तपशील भरा.');return}
+ await runAiTool('/api/generate/poster-prompt',{type,details},'promptResult','AI Poster Prompt तयार होत आहे...');
+}
+async function runAiTool(url,payload,resultId,loadingText){
+ const el=document.getElementById(resultId);el.textContent=loadingText;el.classList.add('show');
+ try{
+  const response=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+  const data=await response.json();
+  if(!response.ok) throw new Error(data.error||'AI विनंती पूर्ण झाली नाही.');
+  el.textContent=data.text;
+ }catch(err){
+  el.textContent='AI सेवा उपलब्ध नाही. सर्व्हर सुरू आहे आणि OPENAI_API_KEY सेट आहे का ते तपासा. तपशील: '+err.message;
+  showToast('AI टूल चालले नाही. सर्व्हर सेटिंग तपासा.');
+ }
+}
+function submitOrder(e){
+ e.preventDefault();
+ const data={id:'NX-'+Date.now().toString().slice(-8),createdAt:new Date().toLocaleString('mr-IN'),status:'नवीन',name:document.getElementById('customerName').value.trim(),contact:document.getElementById('customerContact').value.trim(),service:document.getElementById('serviceType').value,budget:document.getElementById('budget').value,details:document.getElementById('details').value.trim()||'तपशील दिलेले नाहीत'};
+ try { const orders=JSON.parse(localStorage.getItem('nexoraOrders')||'[]'); orders.unshift(data); localStorage.setItem('nexoraOrders',JSON.stringify(orders)); renderOrders(); } catch(err) { showToast('ऑर्डर स्थानिकरीत्या सेव्ह झाली नाही.'); }
+ const out=`NEXORA AI — नवीन ऑर्डर\n\nग्राहकाचे नाव: ${data.name}\nसंपर्क: ${data.contact}\nसेवा: ${data.service}\nबजेट: ${data.budget}\nकामाचे तपशील: ${data.details}`;
+ const el=document.getElementById('orderResult');el.textContent=out;el.classList.add('show');
+ const whatsappUrl='https://wa.me/919637605137?text='+encodeURIComponent(out);
+ const link=document.createElement('a');link.href=whatsappUrl;link.target='_blank';link.rel='noopener noreferrer';
+ link.className='btn';link.style.cssText='display:inline-block;text-decoration:none;margin-top:12px';
+ link.textContent='WhatsApp उघडा आणि Send दाबा ↗';
+ el.appendChild(document.createElement('br'));el.appendChild(link);
+ window.open(whatsappUrl,'_blank');showToast('WhatsApp मध्ये ऑर्डर तपासून Send दाबा.');
+}
+
+function getOrders(){try{return JSON.parse(localStorage.getItem('nexoraOrders')||'[]')}catch(e){return []}}
+function renderOrders(){
+ const orders=getOrders(), body=document.getElementById('ordersBody');
+ document.getElementById('orderCount').textContent=orders.length+' ऑर्डर्स';
+ if(!orders.length){body.innerHTML='<tr><td colspan="5">अजून ऑर्डर्स नाहीत.</td></tr>';return}
+ body.innerHTML='';
+ orders.forEach((o,i)=>{
+  const tr=document.createElement('tr');
+  const cells=[`${o.id||'NX-'+(i+1)}<br><small>${o.createdAt||''}</small>`,`${o.name||''}<br><small>${o.contact||''}</small>`,`${o.service||''}<br><small>${o.budget||''}</small>`,o.details||''];
+  cells.forEach((v)=>{const td=document.createElement('td');td.innerHTML=v;tr.appendChild(td)});
+  const td=document.createElement('td'), sel=document.createElement('select');sel.className='field';sel.style.margin='0';
+  ['नवीन','काम सुरू','पूर्ण','रद्द'].forEach(st=>{const op=document.createElement('option');op.value=st;op.textContent=st;sel.appendChild(op)});sel.value=o.status||'नवीन';
+  sel.addEventListener('change',()=>{const latest=getOrders();const idx=latest.findIndex(x=>x.id===o.id);if(idx>=0){latest[idx].status=sel.value;localStorage.setItem('nexoraOrders',JSON.stringify(latest));showToast('ऑर्डर स्थिती अपडेट झाली.')}});
+  td.appendChild(sel);tr.appendChild(td);body.appendChild(tr);
+ });
+}
+function exportOrders(){
+ const orders=getOrders();if(!orders.length){showToast('डाउनलोड करण्यासाठी ऑर्डर्स नाहीत.');return}
+ const headers=['Order ID','Created','Name','Contact','Service','Budget','Details','Status'];
+ const esc=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
+ const rows=orders.map(o=>[o.id,o.createdAt,o.name,o.contact,o.service,o.budget,o.details,o.status].map(esc).join(','));
+ const blob=new Blob(['\ufeff'+headers.map(esc).join(',')+'\r\n'+rows.join('\r\n')],{type:'text/csv;charset=utf-8;'});
+ const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='nexora-orders.csv';a.click();URL.revokeObjectURL(url);
+}
+renderOrders();
+</script>
+</body>
+</html>
